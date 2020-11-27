@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello
+  labels:
+    app: hello
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: hello
+        version: v1
+    spec:
+      imagePullSecrets:
+      - name: us-east-1-ecr-registry
+    spec:
+      containers:
+      - name: hello
+        image: 643690352380.dkr.ecr.us-east-1.amazonaws.com/hello:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
