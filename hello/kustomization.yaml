@@ -6,4 +6,4 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 images:
 - name: 643690352380.dkr.ecr.us-east-1.amazonaws.com/hello
-  newTag: "64"
+  newTag: "66"
