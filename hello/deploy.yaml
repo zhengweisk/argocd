@@ -17,7 +17,7 @@ spec:
         version: v1
     spec:
       imagePullSecrets:
-      - name: sa-ecr-cred-helper-token-cbvpl
+      - name: us-east-1-ecr-registry
     spec:
       containers:
       - name: hello
